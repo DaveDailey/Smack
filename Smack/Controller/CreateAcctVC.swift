@@ -15,9 +15,5 @@ class CreateAcctVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
     }
-
-
 }
