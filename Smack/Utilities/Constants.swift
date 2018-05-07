@@ -10,3 +10,6 @@ import Foundation
 
 //Segues
 let SHOW_LOGIN = "showLogin"
+let SHOW_CREATE_ACCOUNT = "showCreateAccount"
+let UNWIND_TO_CHANNEL = "unwindToChannel"
+
