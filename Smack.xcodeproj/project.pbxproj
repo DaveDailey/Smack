@@ -15,6 +15,7 @@
 		CE12120E20A07C620061F48D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12120D20A07C620061F48D /* Constants.swift */; };
 		CE12121020A0816C0061F48D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12120F20A0816C0061F48D /* LoginVC.swift */; };
 		CE12121220A0B58E0061F48D /* CreateAcctVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12121120A0B58E0061F48D /* CreateAcctVC.swift */; };
+		CE12121520A0F8A10061F48D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12121420A0F8A10061F48D /* AuthService.swift */; };
 		CECF7BB6209F59B800786F3B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF7BB4209F59B700786F3B /* SWRevealViewController.m */; };
 		CECF7BBB209F5F0600786F3B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF7BBA209F5F0600786F3B /* ChatVC.swift */; };
 		CECF7BBD209F5F1700786F3B /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF7BBC209F5F1700786F3B /* ChannelVC.swift */; };
@@ -32,6 +33,7 @@
 		CE12120D20A07C620061F48D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE12120F20A0816C0061F48D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CE12121120A0B58E0061F48D /* CreateAcctVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcctVC.swift; sourceTree = "<group>"; };
+		CE12121420A0F8A10061F48D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CECF7BB3209F59B700786F3B /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		CECF7BB4209F59B700786F3B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CECF7BB5209F59B800786F3B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		CE0E0E3B209F478100A99935 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				CE12121320A0F88D0061F48D /* Services */,
 				CE12120C20A07C3E0061F48D /* Utilities */,
 				CECF7BB9209F5EE100786F3B /* Model */,
 				CECF7BB8209F5ED800786F3B /* View */,
@@ -112,6 +115,14 @@
 				CE12120D20A07C620061F48D /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CE12121320A0F88D0061F48D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE12121420A0F8A10061F48D /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CECF7BB2209F591E00786F3B /* supporting files */ = {
@@ -276,6 +287,7 @@
 				CE0E0E3D209F478100A99935 /* AppDelegate.swift in Sources */,
 				CE12121220A0B58E0061F48D /* CreateAcctVC.swift in Sources */,
 				CECF7BB6209F59B800786F3B /* SWRevealViewController.m in Sources */,
+				CE12121520A0F8A10061F48D /* AuthService.swift in Sources */,
 				CE12120E20A07C620061F48D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
