@@ -121,6 +121,9 @@
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" red="0.0" green="0.76379437169999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickAvatarPressed:" destination="cRl-k7-rFw" eventType="touchUpInside" id="HIw-j2-VVT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="3q0-6g-wa7">
                                 <rect key="frame" x="137.5" y="292" width="100" height="100"/>
@@ -183,8 +186,11 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.0" green="0.76379437169999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickBgColorPressed:" destination="cRl-k7-rFw" eventType="touchUpInside" id="Psq-9H-tbR"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-7A-aSz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-7A-aSz" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -196,6 +202,14 @@
                                     <color key="titleColor" red="0.99267124419999997" green="1" blue="0.97248810649999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="cRl-k7-rFw" eventType="touchUpInside" id="M9E-1D-a7v"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -218,6 +232,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="userEmailTxt" destination="cUt-uo-x9c" id="MOo-Ei-dAL"/>
+                        <outlet property="userImg" destination="3q0-6g-wa7" id="TAQ-dM-9iH"/>
+                        <outlet property="userPasswordTxt" destination="g9y-As-G2J" id="b5Q-wy-hkt"/>
+                        <outlet property="usernameTxt" destination="kyX-gc-SOT" id="V5V-aT-moo"/>
                         <segue destination="rvV-Uh-1ix" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="8Bh-pt-fgy"/>
                     </connections>
                 </viewController>
@@ -365,7 +383,7 @@
                                     <action selector="exitLogin:" destination="8dm-ym-CcF" eventType="touchUpInside" id="Zge-5j-oov"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiM-B1-92C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiM-B1-92C" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="266" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -377,6 +395,11 @@
                                     <color key="titleColor" red="0.992671244192046" green="1" blue="0.97248810652961049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-Fk-Kum">
                                 <rect key="frame" x="62" y="140" width="250" height="86"/>
