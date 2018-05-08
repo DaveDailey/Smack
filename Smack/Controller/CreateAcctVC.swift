@@ -26,10 +26,16 @@ class CreateAcctVC: UIViewController {
         guard let pass = userPasswordTxt.text , userPasswordTxt.text != "" else {return}
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                print("registered user!")
+                AuthService.instance.loginUser(email: email, password:pass, completion: {(success) in
+                    if success {
+                        print("logged in user!", AuthService.instance.authToken)
+                    }
+                })
             }
         }
     }
+    
+    
     
     @IBAction func closePressed(_ sender: Any) {
         performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
