@@ -15,9 +15,9 @@ class ChannelVC: UIViewController {
     }
     
     //Outlets
+    @IBOutlet weak var profileIcon: UIImageView!
     @IBOutlet weak var loginBtn: UIButton!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
-        
     }
     
     override func viewDidLoad() {
@@ -26,6 +26,14 @@ class ChannelVC: UIViewController {
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            loginBtn.titleLabel?.text = UserDataService.instance.name
+            profileIcon.image = UIImage(named: UserDataService.instance.avatarName)
+            profileIcon.backgroundColor = UIColor(named: UserDataService.instance.avatarColor)
+        }
+        loginBtn.sizeToFit()
+    }
    
 
 }

@@ -20,6 +20,7 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 let SHOW_LOGIN = "showLogin"
 let SHOW_CREATE_ACCOUNT = "showCreateAccount"
 let UNWIND_TO_CHANNEL = "unwindToChannel"
+let TO_AVATAR_PICKER = "toAvatarPicker"
 
 //User Defaults
 let TOKEN_KEY = "token"
@@ -31,3 +32,8 @@ let HEADER = [
     "Content-Type": "application/json; charset= utf-8"
 ]
 
+//Colors
+let smackPurplePlaceholder = #colorLiteral(red: 0.262745098, green: 0.3411764706, blue: 0.7137254902, alpha: 0.5)
+
+//Notification constants
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("noteifuserdidchange")
