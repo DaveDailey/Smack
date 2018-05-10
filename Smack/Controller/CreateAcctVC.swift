@@ -32,6 +32,7 @@ class CreateAcctVC: UIViewController {
         UIView.animate(withDuration: 0.2) {
         self.userImg.backgroundColor = self.bgColor
         }
+        avatarColor = "[\(r),\(g),\(b),1]"
        
     }
     
@@ -70,8 +71,10 @@ class CreateAcctVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         spinner.isHidden = true
-        let tap = UIGestureRecognizer(target: self, action: #selector(CreateAcctVC.handleTap))
-        view.addGestureRecognizer(tap)
+        
+        //had to comment out gesture recognizer. not sure why but made the VC run slow as a MF
+        //let tap = UIGestureRecognizer(target: self, action: #selector(CreateAcctVC.handleTap))
+        //view.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(_ animated: Bool) {
