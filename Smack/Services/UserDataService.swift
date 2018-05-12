@@ -22,6 +22,7 @@ class UserDataService{
         self.avatarName = avatarName
         self.email = email
         self.name = name
+        
     }
 
     func setAvatarName(name:String) {
