@@ -22,6 +22,8 @@
 		CE12121520A0F8A10061F48D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12121420A0F8A10061F48D /* AuthService.swift */; };
 		CE12121720A1022F0061F48D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12121620A1022F0061F48D /* RoundedButton.swift */; };
 		CE1B206B20A7293B0023740D /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B206A20A7293B0023740D /* ChannelCell.swift */; };
+		CE1B207220AF08680023740D /* CreateChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B207020AF08680023740D /* CreateChannelVC.swift */; };
+		CE1B207320AF08680023740D /* CreateChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1B207120AF08680023740D /* CreateChannelVC.xib */; };
 		CECF7BB6209F59B800786F3B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECF7BB4209F59B700786F3B /* SWRevealViewController.m */; };
 		CECF7BBB209F5F0600786F3B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF7BBA209F5F0600786F3B /* ChatVC.swift */; };
 		CECF7BBD209F5F1700786F3B /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF7BBC209F5F1700786F3B /* ChannelVC.swift */; };
@@ -51,6 +53,8 @@
 		CE12121420A0F8A10061F48D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CE12121620A1022F0061F48D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CE1B206A20A7293B0023740D /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		CE1B207020AF08680023740D /* CreateChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelVC.swift; sourceTree = "<group>"; };
+		CE1B207120AF08680023740D /* CreateChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CreateChannelVC.xib; path = ../Controller/CreateChannelVC.xib; sourceTree = "<group>"; };
 		CECF7BB3209F59B700786F3B /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		CECF7BB4209F59B700786F3B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CECF7BB5209F59B800786F3B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1127E720A470FF00F8215C /* ProfileVC.xib */,
+				CE1B207120AF08680023740D /* CreateChannelVC.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				CE12121120A0B58E0061F48D /* CreateAcctVC.swift */,
 				CEE4BE2620A3437900F0BCE5 /* AvatarPickerVC.swift */,
 				CE1127E620A470FF00F8215C /* ProfileVC.swift */,
+				CE1B207020AF08680023740D /* CreateChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			files = (
 				CE1127E920A470FF00F8215C /* ProfileVC.xib in Resources */,
 				CE0E0E47209F478400A99935 /* LaunchScreen.storyboard in Resources */,
+				CE1B207320AF08680023740D /* CreateChannelVC.xib in Resources */,
 				CE0E0E44209F478400A99935 /* Assets.xcassets in Resources */,
 				CE0E0E42209F478100A99935 /* Main.storyboard in Resources */,
 			);
@@ -336,6 +343,7 @@
 				CE12121020A0816C0061F48D /* LoginVC.swift in Sources */,
 				CECF7BBF20A06EFF00786F3B /* GradientView.swift in Sources */,
 				CE0E0E3D209F478100A99935 /* AppDelegate.swift in Sources */,
+				CE1B207220AF08680023740D /* CreateChannelVC.swift in Sources */,
 				CE12121220A0B58E0061F48D /* CreateAcctVC.swift in Sources */,
 				CEE4BE2920A3460000F0BCE5 /* AvatarCell.swift in Sources */,
 				CECF7BB6209F59B800786F3B /* SWRevealViewController.m in Sources */,

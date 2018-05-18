@@ -19,6 +19,11 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         present(profile, animated: true, completion: nil)
         }
     }
+    @IBAction func createChannelBtn(_ sender: Any) {
+        let channel = CreateChannelVC()
+        channel.modalPresentationStyle = .custom
+        present(channel, animated: true, completion: nil)
+    }
     
     //Outlets
     @IBOutlet weak var profileIcon: UIImageView!

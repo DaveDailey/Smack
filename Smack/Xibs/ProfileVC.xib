@@ -101,7 +101,7 @@
                 <constraint firstItem="zTo-a5-YuD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Eyr-VT-rKW"/>
                 <constraint firstItem="dU0-8K-5zV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="F4g-ac-qd0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dU0-8K-5zV" secondAttribute="trailing" constant="20" id="MP4-1d-qEE"/>
-                <constraint firstItem="zTo-a5-YuD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ngw-CV-xiR"/>
+                <constraint firstItem="zTo-a5-YuD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Ngw-CV-xiR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zTo-a5-YuD" secondAttribute="bottom" id="O7E-uC-KgM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
