@@ -22,12 +22,14 @@ class CreateChannelVC: UIViewController {
     }
     
     @IBAction func createChannelBtn(_ sender: Any) {
-        let channel = channelNameText.text ?? ""
-        let description = descriptionText.text ?? ""
-        MessageService.instance.addChannel(name:channel, description:description ,completion:{ (success) in if success {
-            
+        guard let channelName = channelNameText.text, channelNameText.text != "" else {return}
+        guard let description = descriptionText.text else {return}
+        SocketService.instance.addChannel(channelName: channelName, channelDescription: description){ (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
             }
-        })
+        }
+        
         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         self.dismiss(animated: true, completion: nil)
     }

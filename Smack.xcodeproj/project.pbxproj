@@ -21,6 +21,7 @@
 		CE12121220A0B58E0061F48D /* CreateAcctVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12121120A0B58E0061F48D /* CreateAcctVC.swift */; };
 		CE12121520A0F8A10061F48D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12121420A0F8A10061F48D /* AuthService.swift */; };
 		CE12121720A1022F0061F48D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12121620A1022F0061F48D /* RoundedButton.swift */; };
+		CE1AC22420B0562800866130 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1AC22320B0562800866130 /* SocketService.swift */; };
 		CE1B206B20A7293B0023740D /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B206A20A7293B0023740D /* ChannelCell.swift */; };
 		CE1B207220AF08680023740D /* CreateChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1B207020AF08680023740D /* CreateChannelVC.swift */; };
 		CE1B207320AF08680023740D /* CreateChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1B207120AF08680023740D /* CreateChannelVC.xib */; };
@@ -52,6 +53,7 @@
 		CE12121120A0B58E0061F48D /* CreateAcctVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcctVC.swift; sourceTree = "<group>"; };
 		CE12121420A0F8A10061F48D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		CE12121620A1022F0061F48D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CE1AC22320B0562800866130 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		CE1B206A20A7293B0023740D /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		CE1B207020AF08680023740D /* CreateChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelVC.swift; sourceTree = "<group>"; };
 		CE1B207120AF08680023740D /* CreateChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CreateChannelVC.xib; path = ../Controller/CreateChannelVC.xib; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				CE12121420A0F8A10061F48D /* AuthService.swift */,
 				CED55B4F20A315D9001F1357 /* UserDataService.swift */,
 				CE1127EB20A5EA8800F8215C /* Message.swift */,
+				CE1AC22320B0562800866130 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				CE12121020A0816C0061F48D /* LoginVC.swift in Sources */,
 				CECF7BBF20A06EFF00786F3B /* GradientView.swift in Sources */,
 				CE0E0E3D209F478100A99935 /* AppDelegate.swift in Sources */,
+				CE1AC22420B0562800866130 /* SocketService.swift in Sources */,
 				CE1B207220AF08680023740D /* CreateChannelVC.swift in Sources */,
 				CE12121220A0B58E0061F48D /* CreateAcctVC.swift in Sources */,
 				CEE4BE2920A3460000F0BCE5 /* AvatarCell.swift in Sources */,

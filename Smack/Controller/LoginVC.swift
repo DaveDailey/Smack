@@ -23,16 +23,18 @@ class LoginVC: UIViewController {
         spinner.startAnimating()
         guard let email = userNameTextField.text else {return}
         guard let password = passwordTextField.text else {return}
-        AuthService.instance.loginUser(email: email, password:password, completion: {(success) in if success {
-            AuthService.instance.findUserByEmail(completion: { (success) in if success {
-                self.spinner.stopAnimating()
-                self.spinner.isHidden = true
-                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-                self.dismiss(animated: true, completion: nil)
+        AuthService.instance.loginUser(email: email, password:password) {(success) in
+                if success {
+            AuthService.instance.findUserByEmail(completion: { (success) in
+                if success {
+                    self.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                    NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }
             })
             }
-        })
+        }
     }
     
     

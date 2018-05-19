@@ -27,8 +27,8 @@ class CreateAcctVC: UIViewController {
         let r = CGFloat(arc4random_uniform(255))/255
         let g = CGFloat(arc4random_uniform(255))/255
         let b = CGFloat(arc4random_uniform(255))/255
-        let a :CGFloat = 1
-        bgColor = UIColor(red: r, green: g, blue: b, alpha: a)
+        
+        bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
         UIView.animate(withDuration: 0.2) {
         self.userImg.backgroundColor = self.bgColor
         }
@@ -51,10 +51,11 @@ class CreateAcctVC: UIViewController {
             if success {
                 AuthService.instance.loginUser(email: email, password:pass, completion: {(success) in if success {
                             AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in if success {
-                                self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
+                                
                                 self.spinner.stopAnimating()
                                 self.spinner.isHidden = true
                                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                                self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
                             }
                         })
                     }
@@ -70,25 +71,24 @@ class CreateAcctVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        spinner.isHidden = true
-        
-        //had to comment out gesture recognizer. not sure why but made the VC run slow as a MF
-        //let tap = UIGestureRecognizer(target: self, action: #selector(CreateAcctVC.handleTap))
-        //view.addGestureRecognizer(tap)
+        setUpView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
             userImg.image = UIImage(named: UserDataService.instance.avatarName)
             avatarName = UserDataService.instance.avatarName
-        }
-        if avatarName.contains("light") && bgColor == nil {
-            userImg.backgroundColor = UIColor.lightGray
-        } else if avatarName.contains("dark") {
-            userImg.backgroundColor = UIColor.gray
+            if avatarName.contains("light") && bgColor == nil {
+                userImg.backgroundColor = UIColor.lightGray
+            }
         }
     }
     
+    func setUpView() {
+        spinner.isHidden = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAcctVC.handleTap))
+        view.addGestureRecognizer(tap)
+    }
     
     
     @objc func handleTap () {

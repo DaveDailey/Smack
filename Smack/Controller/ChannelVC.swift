@@ -11,14 +11,15 @@ import UIKit
 class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBAction func loginBtnPressed(_ sender: Any) {
-        if AuthService.instance.isLoggedIn == false {
-        performSegue(withIdentifier: SHOW_LOGIN, sender: nil)
-        } else if AuthService.instance.isLoggedIn == true {
-        let profile = ProfileVC()
-        profile.modalPresentationStyle = .custom
-        present(profile, animated: true, completion: nil)
+        if AuthService.instance.isLoggedIn {
+            let profile = ProfileVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: SHOW_LOGIN, sender: nil)
         }
     }
+    
     @IBAction func createChannelBtn(_ sender: Any) {
         let channel = CreateChannelVC()
         channel.modalPresentationStyle = .custom
@@ -28,9 +29,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     //Outlets
     @IBOutlet weak var profileIcon: UIImageView!
     @IBOutlet weak var loginBtn: UIButton!
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
-        
-    }
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -39,10 +38,15 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        loginBtn.sizeToFit()
+        //loginBtn.sizeToFit()
         setUpUserView()
     }
    
@@ -52,7 +56,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     func setUpUserView(){
         if AuthService.instance.isLoggedIn {
-            loginBtn.titleLabel?.text = UserDataService.instance.name
+            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             profileIcon.image = UIImage(named: UserDataService.instance.avatarName)
             profileIcon.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
         } else {

@@ -11,7 +11,7 @@ import UIKit
 class ProfileVC: UIViewController {
     
     //Outlets
-    @IBOutlet weak var profileImg: CircleImage!
+    @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var emailAddresslbl: UILabel!
     @IBOutlet weak var bgView: UIView!
@@ -44,7 +44,7 @@ class ProfileVC: UIViewController {
     }
    
     @objc func closeTap(_ recognizer: UITapGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
 }
